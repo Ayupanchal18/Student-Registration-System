@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#studet_list table thead tr th {
+  text-align: center;
+  border: 2px solid black;
+  padding: 3px;
+  font-weight: bold;
+}
+#studet_list table tbody tr td {
+  text-align: center;
+  border: 2px solid black;
+  padding: 3px;
+}

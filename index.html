@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio Website">
+    <meta name="keywords" content="Student Registration System">
+    <meta name="author" content="Aayush panchal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" style="border-radius: 25px;" href="./Images/favlogo.png" type="image/png">
+    <title>Student Data Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gray-100 flex m-auto items-center justify-center h-screen w-full mt-2">
+        <h1
+            class="text-2xl font-bold mb-4 text-center underline p-4 fixed top-0 bg-gray-100 border-b-2 w-full shadow-lg ">
+            Student
+            Data
+            Management
+            System
+        </h1>
+
+        <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <!-- Header Section -->
+            <h1 class="text-xl font-bold mb-4 text-center">Registration Form</h1>
+            <div class="text-left">
+                <h1 class="font-semibold">Note : Available Commands for the system.</h1>
+                <ul class="list-disc pl-5">
+                    <li>Add Student details.</li>
+                    <li>Edit Student Details.</li>
+                    <li>Delete the Student details.</li>
+                </ul>
+            </div>
+            <br>
+            <!-- Registration Form -->
+            <form id="studentForm" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+
+                <div>
+                    <label for="class" class="block text-sm font-medium text-gray-700">Student ID</label>
+                    <input type="number" id="class"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700">Email ID</label>
+                    <input type="email" id="address"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+
+                <div>
+                    <label for="contact" class="block text-sm font-medium text-gray-700">Contact Number</label>
+                    <input type="number" id="contact"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+
+                <button type="submit" class="w-full bg-orange-600 text-white py-2 px-4 rounded-md">Add Student</button>
+            </form>
+        </div>
+
+        <!-- Student Data List -->
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg overflow-auto" id="studet_list"
+            style="height: 550px;">
+            <h2 class="text-xl font-bold mb-4 text-center ">Registered Students's Details</h2>
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Name</th>
+                        <th
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Student ID</th>
+                        <th
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Email ID</th>
+                        <th
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Contact</th>
+                        <th
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                    <!-- Blank -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
